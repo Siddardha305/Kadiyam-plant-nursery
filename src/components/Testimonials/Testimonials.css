@@ -1,0 +1,49 @@
+.testimonials {
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Green Theme Adaptation: Transparent bg to show deep green from body if desired, 
+   or keep light contrast section. 
+   Let's use transparent with glass cards again for 'Deep Green' consistency. */
+
+.testimonials {
+    background-color: transparent;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Speech bubble effect optional */
+}
+
+.stars {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.star-icon {
+    margin-right: 2px;
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #003214;
+}

@@ -1,0 +1,53 @@
+.plant-categories {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #003214;
+    /* Deep Green Theme Integration */
+    /* Alternatively, could be white/light with green cards. 
+       Let's stick to the deep green theme requested, using a slightly lighter container 
+       or transparent if it sits on the body bg */
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    background: rgba(255, 255, 255, 0.1);
+    /* Glass effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 3rem;
+    color: #ffd700;
+    /* Gold */
+    margin-bottom: 15px;
+}
+
+.category-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.categories-cta {
+    margin-top: 30px;
+}

@@ -1,0 +1,45 @@
+.contact-cta {
+    padding: 80px 5%;
+    background: linear-gradient(rgba(0, 50, 20, 0.9), rgba(0, 50, 20, 0.9)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2670&auto=format&fit=crop');
+    /* Deep Green Gradient Overlay */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    min-width: 180px;
+    justify-content: center;
+}
+
+.btn-icon-left {
+    margin-right: 10px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366 !important;
+    /* WhatsApp Green override */
+    border-color: #25D366 !important;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E !important;
+}

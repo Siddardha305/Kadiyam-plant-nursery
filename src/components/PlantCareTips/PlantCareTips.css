@@ -1,0 +1,65 @@
+.plant-care-tips {
+    padding: 80px 5%;
+    background-color: #003214;
+    /* Deep Green Theme */
+    text-align: center;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.blog-image-container {
+    height: 200px;
+    width: 100%;
+}
+
+.blog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+    color: white;
+}
+
+.blog-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.blog-excerpt {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.read-more-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+.blog-cta {
+    margin-top: 30px;
+}
