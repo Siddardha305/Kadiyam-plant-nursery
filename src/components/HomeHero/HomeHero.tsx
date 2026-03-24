@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../Button/Button';
 import { FaSeedling, FaBoxOpen, FaLeaf } from 'react-icons/fa6';
 import './HomeHero.css';
@@ -6,6 +7,8 @@ import './HomeHero.css';
 const CustomIcon = () => <FaLeaf style={{ marginLeft: '8px', verticalAlign: 'middle' }} />;
 
 export const HomeHero: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="home-hero">
             <div className="hero-overlay"></div>
@@ -21,10 +24,10 @@ export const HomeHero: React.FC = () => {
                     fruit plants, and landscaping plants with care and quality.
                 </p>
                 <div className="hero-buttons">
-                    <Button variant="green" className="hero-btn-gap">
+                    <Button variant="green" className="hero-btn-gap" onClick={() => navigate('/varieties')}>
                         Explore Plants <span className="btn-icon"><FaSeedling /></span>
                     </Button>
-                    <Button variant="yellow-outline" className="hero-btn-gap">
+                    <Button variant="yellow-outline" className="hero-btn-gap" onClick={() => navigate('/contact')}>
                         Bulk Order Inquiry <span className="btn-icon"><FaBoxOpen /></span>
                     </Button>
                 </div>
