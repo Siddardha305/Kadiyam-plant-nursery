@@ -5,20 +5,20 @@ import './Testimonials.css';
 const testimonials = [
     {
         id: 1,
-        quote: "Plants arrived fresh and healthy. Very happy with the quality and service!",
-        name: "Customer from Hyderabad",
+        quote: "It’s very nice and peaceful. The nursery has different kinds of plants and it’s very beautiful. The way of receiving the customers is also good.",
+        name: "B.Deepika",
         rating: 5
     },
     {
         id: 2,
-        quote: "Excellent sourcing for our landscaping project. Top quality bulk supply.",
-        name: "Landscape Architect, Bangalore",
+        quote: "Good nursery… we get almost every plant here. The experience is very good.",
+        name: "Priya",
         rating: 5
     },
     {
         id: 3,
-        quote: "The variety of fruit plants they have is amazing. Highly recommended.",
-        name: "Farmer from Vijayawada",
+        quote: "Very well satisfied, everything is perfect and on‑time service. If you want any plants or garden designs, I personally prefer Kadiyam Nursery.",
+        name: "Another client",
         rating: 5
     }
 ];

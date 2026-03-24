@@ -1,0 +1,78 @@
+.our-staff {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.staff-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.staff-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 280px;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-image-container {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.staff-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.staff-card:hover .staff-image {
+    transform: scale(1.05);
+}
+
+.staff-info {
+    padding: 20px;
+}
+
+.staff-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.staff-role {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .staff-card {
+        background: #1e1e1e;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .staff-name {
+        color: #f1f1f1;
+    }
+
+    .staff-role {
+        color: #6edb96;
+    }
+}

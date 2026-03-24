@@ -1,6 +1,6 @@
 .about-us {
     padding: 80px 5%;
-    background-color: #003214;
+    background-color: var(--color-primary);
     /* Deep Green Theme */
     text-align: center;
     color: white;

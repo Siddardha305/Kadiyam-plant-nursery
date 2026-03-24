@@ -45,5 +45,5 @@
 
 .testimonial-author {
     font-weight: 600;
-    color: #003214;
+    color: var(--color-primary);
 }

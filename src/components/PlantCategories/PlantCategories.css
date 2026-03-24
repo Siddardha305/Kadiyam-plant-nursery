@@ -1,7 +1,7 @@
 .plant-categories {
     padding: 80px 5%;
     text-align: center;
-    background-color: #003214;
+    background-color: var(--color-primary);
     /* Deep Green Theme Integration */
     /* Alternatively, could be white/light with green cards. 
        Let's stick to the deep green theme requested, using a slightly lighter container 

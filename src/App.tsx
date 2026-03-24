@@ -1,35 +1,35 @@
-import './App.css'
-import { Navbar } from './components/Navbar/Navbar'
-import { HomeHero } from './components/HomeHero/HomeHero'
-import { WhyChooseUs } from './components/WhyChooseUs/WhyChooseUs';
-import { PlantCategories } from './components/PlantCategories/PlantCategories';
-import { FeaturedPlants } from './components/FeaturedPlants/FeaturedPlants';
-import { AboutUs } from './components/AboutUs/AboutUs';
-import { OurServices } from './components/OurServices/OurServices';
-import { Gallery } from './components/Gallery/Gallery';
-import { Testimonials } from './components/Testimonials/Testimonials';
-import { PlantCareTips } from './components/PlantCareTips/PlantCareTips';
-import { ContactCTA } from './components/ContactCTA/ContactCTA';
+import { Routes, Route } from 'react-router-dom';
+import { Navbar } from './components/Navbar/Navbar';
 import { Footer } from './components/Footer/Footer';
+import { WhatsAppButton } from './components/WhatsAppButton/WhatsAppButton';
+import { Home } from './pages/Home';
+import { PlantDetails } from './pages/PlantDetails';
+import { About } from './pages/About';
+import { VarietiesPage } from './pages/VarietiesPage';
+import { Services } from './pages/Services';
+import { GalleryPage } from './pages/GalleryPage';
+import { Contact } from './pages/Contact';
+import './App.css';
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <HomeHero />
-      <WhyChooseUs />
-      <PlantCategories />
-      <FeaturedPlants />
-      <AboutUs />
-      <OurServices />
-      <Gallery />
-      <Testimonials />
-      <PlantCareTips />
-      <ContactCTA />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/varieties" element={<VarietiesPage />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/plant/:id" element={<PlantDetails />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+      <WhatsAppButton />
+    </div>
   )
 }
 
 export default App
-

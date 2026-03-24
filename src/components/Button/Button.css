@@ -50,17 +50,20 @@
   background-color: rgba(100, 108, 255, 0.1);
 }
 
-/* Green Variant (Dynamic) */
+/* Green Variant (Primary Theme) */
 .btn-green {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--color-primary, #2d4a22);
+  color: var(--color-bg-light, #faf9f5);
   border: none;
-  box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(45, 74, 34, 0.2);
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .btn-green:hover {
-  background-color: #45a049;
-  box-shadow: 0 6px 8px rgba(76, 175, 80, 0.4);
+  background-color: var(--color-primary-light, #3e6b2d);
+  box-shadow: 0 6px 15px rgba(45, 74, 34, 0.3);
+  transform: translateY(-2px);
 }
 
 /* Yellow Outline Variant */

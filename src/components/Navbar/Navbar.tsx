@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../Button/Button';
 import './Navbar.css';
-import logo from '../../assets/react.svg'; // Using placeholder for now as requested
+import logo from '../../assets/react.svg';
 
 export const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -17,36 +19,47 @@ export const Navbar: React.FC = () => {
     }
 
     const navLinks: NavLink[] = [
-        { name: 'Home', href: '#home' },
-        { name: 'About Us', href: '#about' },
+        { name: 'Home', href: '/' },
+        { name: 'About Us', href: '/about' },
+        { name: 'Services', href: '/services' },
         {
             name: 'Varieties',
+            href: '/varieties',
             children: [
-                { name: 'Avenue Plants', href: '#avenue-plants' },
-                { name: 'Coconut Varieties', href: '#coconut-varieties' },
-                { name: 'Creepers', href: '#creepers' },
-                { name: 'Flowering Plants', href: '#flowering-plants' },
-                { name: 'Indoor & Outdoor Plants', href: '#indoor-outdoor' },
-                { name: 'Fruit Plants', href: '#fruit-plants' },
-                { name: 'Palms', href: '#palms' },
+                { name: 'Avenue Plants', href: '/varieties#avenue-plants' },
+                { name: 'Flowering Plants', href: '/varieties#flowering-plants' },
+                { name: 'Fruit Plants', href: '/varieties#fruit-plants' },
+                { name: 'Creepers', href: '/varieties#creepers' },
+                { name: 'Indoor & Outdoor', href: '/varieties#indoor-outdoor' },
+                { name: 'Palms', href: '/varieties#palms' },
+                { name: 'Bonsai', href: '/varieties#bonsai' },
+                { name: 'Coconut', href: '/varieties#coconut-varieties' },
             ]
         },
-        {
-            name: 'Gallery',
-            children: [
-                { name: 'Photos', href: '#photos' },
-                { name: 'Videos', href: '#videos' },
-            ]
-        },
+        { name: 'Gallery', href: '/gallery' },
     ];
+
+    const handleLinkClick = (href: string | undefined) => {
+        setIsOpen(false);
+        if (href?.includes('#')) {
+            const [path, hash] = href.split('#');
+            navigate(path);
+            setTimeout(() => {
+                const element = document.getElementById(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    };
 
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <div className="navbar-logo">
+                <Link to="/" className="navbar-logo">
                     <img src={logo} alt="Logo" className="logo-img" />
                     <span className="logo-text">Kadiyam Nursery</span>
-                </div>
+                </Link>
 
                 <div className={`navbar-menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                     <div className="bar"></div>
@@ -59,26 +72,37 @@ export const Navbar: React.FC = () => {
                         <li key={link.name} className={`nav-item ${link.children ? 'dropdown' : ''}`}>
                             {link.children ? (
                                 <>
-                                    <span className="nav-link dropdown-toggle">{link.name}</span>
+                                    <Link to={link.href || '#'} className="nav-link dropdown-toggle" onClick={() => setIsOpen(false)}>
+                                        {link.name}
+                                    </Link>
                                     <ul className="dropdown-menu">
                                         {link.children.map((child) => (
                                             <li key={child.name} className="dropdown-item">
-                                                <a href={child.href} className="nav-link" onClick={() => setIsOpen(false)}>
-                                                    {child.name}
-                                                </a>
+                                                {child.href?.includes('#') ? (
+                                                    <a href={child.href} className="nav-link" onClick={(e) => {
+                                                        e.preventDefault();
+                                                        handleLinkClick(child.href);
+                                                    }}>
+                                                        {child.name}
+                                                    </a>
+                                                ) : (
+                                                    <Link to={child.href || '#'} className="nav-link" onClick={() => setIsOpen(false)}>
+                                                        {child.name}
+                                                    </Link>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>
                                 </>
                             ) : (
-                                <a href={link.href} className="nav-link" onClick={() => setIsOpen(false)}>
+                                <Link to={link.href || '#'} className="nav-link" onClick={() => setIsOpen(false)}>
                                     {link.name}
-                                </a>
+                                </Link>
                             )}
                         </li>
                     ))}
                     <li className="nav-item-btn">
-                        <Button variant="green" onClick={() => console.log('Contact Us clicked')}>
+                        <Button variant="green" onClick={() => navigate('/contact')}>
                             Contact Us
                         </Button>
                     </li>

@@ -1,0 +1,150 @@
+.plant-details-container {
+    padding: 100px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.back-btn-wrapper {
+    margin-bottom: 30px;
+}
+
+.plant-not-found {
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.plant-not-found h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plant-details-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.plant-details-image {
+    flex: 1;
+    min-width: 300px;
+    max-height: 500px;
+}
+
+.plant-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.plant-details-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plant-details-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin: 0 0 10px 0;
+}
+
+.plant-details-telugu {
+    font-size: 1.25rem;
+    color: #666;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
+.plant-details-description {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.plant-details-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.meta-box {
+    background: #f0fdf4;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #00c853;
+}
+
+.meta-box strong {
+    display: block;
+    color: #003214;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-box p {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.plant-details-actions {
+    margin-top: auto;
+}
+
+.plant-details-actions button {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+@media (max-width: 768px) {
+    .plant-details-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    .plant-details-info {
+        padding: 30px 20px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .plant-not-found h2 {
+        color: #f1f1f1;
+    }
+    .plant-details-content {
+        background: #1e1e1e;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .plant-details-title {
+        color: #f1f1f1;
+    }
+    .plant-details-telugu {
+        color: #aaa;
+    }
+    .plant-details-description {
+        color: #ddd;
+    }
+    .meta-box {
+        background: #2a3a2f;
+        border-left-color: #6edb96;
+    }
+    .meta-box strong {
+        color: #6edb96;
+    }
+    .meta-box p {
+        color: #f1f1f1;
+    }
+}

@@ -1,0 +1,142 @@
+.varieties-section {
+    padding: 80px 5%;
+    background-color: rgba(255, 255, 255, 0.05); /* Similar styling to featured plants */
+    text-align: center;
+}
+
+.variety-category {
+    margin-bottom: 60px;
+}
+
+.variety-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: left;
+    border-bottom: 2px solid #00c853;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.variety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.plant-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-image-container {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.plant-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.plant-card:hover .plant-image {
+    transform: scale(1.1);
+}
+
+.plant-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%; /* Important to make buttons align at bottom */
+}
+
+.plant-header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.plant-telugu {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+.plant-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1; /* Pushes the button to bottom */
+}
+
+.plant-care, .plant-price {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 5px;
+    background: #f0fdf4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.plant-care:last-of-type, .plant-price:last-of-type {
+    margin-bottom: 15px;
+}
+
+.buy-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (prefers-color-scheme: light) {
+    .variety-title {
+        color: var(--color-primary);
+    }
+    .varieties-section {
+        background-color: var(--color-bg-light);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .plant-card {
+        background: var(--color-bg-card-dark, #1e2e1c);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .plant-name {
+        color: var(--color-text-dark-main);
+    }
+
+    .plant-telugu {
+        color: var(--color-text-dark-muted);
+    }
+
+    .plant-desc {
+        color: var(--color-text-dark-main);
+    }
+
+    .plant-care, .plant-price {
+        color: var(--color-text-dark-main);
+        background: rgba(120, 161, 90, 0.2); /* Muted accent */
+    }
+}
