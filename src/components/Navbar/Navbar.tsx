@@ -26,8 +26,8 @@ export const Navbar: React.FC = () => {
             name: 'Varieties',
             href: '/varieties',
             children: [
-                { name: 'Avenue Plants', href: '/varieties#avenue-plants' },
-                { name: 'Flowering Plants', href: '/varieties#flowering-plants' },
+                { name: 'Avenue Plant', href: '/varieties#avenue-plants' },
+                { name: 'Flowering Plant', href: '/varieties#flowering-plants' },
                 { name: 'Fruit Plants', href: '/varieties#fruit-plants' },
                 { name: 'Creepers', href: '/varieties#creepers' },
                 { name: 'Indoor & Outdoor', href: '/varieties#indoor-outdoor' },
