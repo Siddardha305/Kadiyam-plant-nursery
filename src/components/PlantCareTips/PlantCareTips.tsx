@@ -13,13 +13,13 @@ const blogs = [
         id: 2,
         title: "Best Plants for Indian Climate",
         excerpt: "Top picks for thriving plants in Indian weather conditions.",
-        image: "https://images.unsplash.com/photo-1598555849887-73d80918939c?q=80&w=2670&auto=format&fit=crop"
+        image: "https://img.freepik.com/premium-photo/rows-young-flowers-greenhouse-with-lot-indoor-plants-plantation_97694-10404.jpg"
     },
     {
         id: 3,
         title: "Watering Tips for Beginners",
         excerpt: "Avoid overwatering or underwatering with these simple guides.",
-        image: "https://images.unsplash.com/photo-1525925433297-c836d226079d?q=80&w=2356&auto=format&fit=crop"
+        image: "https://www.idyl.co.in/cdn/shop/articles/out-0_5ed6076c-2047-48a2-b94f-0e4ed1662d09.png?v=1729685617"
     }
 ];
 

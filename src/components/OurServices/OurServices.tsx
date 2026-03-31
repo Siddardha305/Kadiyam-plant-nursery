@@ -1,11 +1,11 @@
 import React from 'react';
-import { FaHome, FaBuilding, FaTruck, FaLeaf, FaMapMarkedAlt } from 'react-icons/fa';
+import { FaHome, FaBuilding, FaTruck, FaLeaf, FaMapMarkedAlt, FaSeedling } from 'react-icons/fa';
 import './OurServices.css';
 
 const services = [
     {
         id: 1,
-        icon: <FaLeaf />,
+        icon: <FaSeedling />,
         title: "Home Gardening Support",
         description: "Expert advice and tools for your home garden."
     },
@@ -32,6 +32,12 @@ const services = [
         icon: <FaMapMarkedAlt />,
         title: "Pan-India Plant Delivery",
         description: "Reliable plant delivery services across the country."
+    },
+    {
+        id: 6,
+        icon: <FaLeaf />,
+        title: "Organic Plant Care",
+        description: "Eco-friendly solutions for healthy plant growth."
     }
 ];
 
