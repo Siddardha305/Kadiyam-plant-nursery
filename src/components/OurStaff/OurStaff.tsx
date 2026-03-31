@@ -4,16 +4,10 @@ import './OurStaff.css';
 const staffMembers = [
     {
         id: 1,
-        name: "Nagendra",
-        role: "Nursery Head",
-        image: "https://images.unsplash.com/photo-1542314831-c6a4d14effea?q=80&w=2670&auto=format&fit=crop"
+        name: "Challa DurgaPrasad",
+        role: "Nursery Head & Landscaping Manager",
+        image: "../owner.jpeg"
     },
-    {
-        id: 2,
-        name: "Venkatesh",
-        role: "Landscaping Manager",
-        image: "https://images.unsplash.com/photo-1581579205556-33923b7b80b7?q=80&w=2574&auto=format&fit=crop"
-    }
 ];
 
 export const OurStaff: React.FC = () => {
